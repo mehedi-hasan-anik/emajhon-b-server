@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
-    const productsCollection = client.db("emajohnstore").collection("products");
-    const ordersCollection = client.db("emajohnstore").collection("orders");
+    const productsCollection = client.db("emajhon").collection("allProduct");
+    const ordersCollection = client.db("emajhon").collection("allOrder");
 
 
     app.post('/addProduct', (req, res) => {
